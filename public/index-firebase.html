@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+  <title>Endn't TicTacToe</title>
+</head>
+<body>
+  
+  <script>
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "firebase/app";
+    import { getAnalytics } from "firebase/analytics";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBM4Cf2bSCchnKZLZSb93v_iq13mLqJL7A",
+      authDomain: "endn-t-tictactoe.firebaseapp.com",
+      databaseURL: "https://endn-t-tictactoe-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "endn-t-tictactoe",
+      storageBucket: "endn-t-tictactoe.appspot.com",
+      messagingSenderId: "495095018167",
+      appId: "1:495095018167:web:b22ae8a47f1069c9bad332",
+      measurementId: "G-31P42NTJRN"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    
+  firebase.initializeApp(firebaseConfig)
+  </script>
+</body>
+</html>
