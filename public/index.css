@@ -1,0 +1,95 @@
+body {
+    background-color: rgba(28,64,76,255);
+    font-family: "Trirong", serif;
+}
+
+.navbar {
+    background-color: rgba(205,79,65,255);
+    padding: 0%;
+}
+
+#btnSetting {
+    background-color: rgba(222,158,70,255);
+    color: rgba(28,64,76,255);
+    border-radius: 0;
+    font-size: 3.5rem;
+    height: 6rem;
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+
+#btnLogIn {
+    background-color: rgba(45,128,119,255);
+    color: rgba(222,158,70,255);
+    border-radius: 0;
+    font-size: 3rem;
+    height: 6rem;
+    padding: 0% 2rem;
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+
+.container-fluid {
+    padding: 0%;
+    padding-left: 2%;
+}
+
+#MainLogo {
+    margin-top: 3rem;
+    margin-left: 7rem;
+}
+
+#btnPlay {
+    height: 8rem;
+    width: 50%;
+    background-color: white;
+    color: rgba(45,128,119,255);
+    font-weight: bold;
+    font-family: "Trirong", serif;
+    font-size: 3rem;
+    margin-top: 7rem;
+    box-shadow: 0px 5px rgba(21,48,57,255);
+}
+#btnLeaderboard {
+    height: 8rem;
+    width: 50%;
+    background-color: white;
+    color: rgba(205,79,65,255);
+    font-weight: bold;
+    font-family: "Trirong", serif;
+    font-size: 3rem;
+    margin-top: 2rem;
+    box-shadow: 0px 5px rgba(21,48,57,255);
+}
+#btnHow {
+    height: 5rem;
+    width: 30%;
+    background-color: white;
+    color: rgba(222,158,70,255);
+    font-weight: bold;
+    font-family: "Trirong", serif;
+    font-size: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0px 5px rgba(21,48,57,255);
+}
+
+#btnLogin {
+    background-color: rgba(45,128,119,255);
+    color: white;
+    width: 100%;
+    padding: 0.75rem 0%;
+}
+
+#btnSignup {
+    background-color: rgba(45,128,119,255);
+    color: white;
+    width: 100%;
+    padding: 0.75rem 0%;
+}
+
+.ToggleSignup {
+    background: none; 
+    border: none; 
+    color: rgba(205,79,65,255);
+    font-weight: bold;
+}

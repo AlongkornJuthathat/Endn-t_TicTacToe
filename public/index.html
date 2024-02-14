@@ -10,32 +10,89 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
   <title>Endn't TicTacToe</title>
 </head>
 <body>
-  <div class="container p-5 justify-content-center">
-    <div class="d-flex">
-      <div class="me-3">
-        <h1>My List</h1>
+  <div class="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="image/LogoWithText.png" width="500px" height="80px">
+      </a>
+      <nav class="navbar navbar-expand-lg">
+        <button type="button" id="btnSetting" class="btn btn-lg">
+          <i class="bi bi-gear"></i>
+        </button>
+        <button type="button" id="btnLogIn" class="btn btn-sm logged-out" data-bs-toggle="modal" data-bs-target="#modal-login">
+          Login <i class="bi bi-person"></i>
+        </button>
+      </nav>
+    </div>
+  </div>
+  <div class="modal" id="modal-login" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="col-12 modal-title text-center" style="font-size: 2.5rem; font-weight: bold;">Sign In.</h5>
+        </div>
+        <form id="login-form">
+          <div class="modal-body mb-5 border-0">
+            <span style="font-weight: bold;">Username</span>
+            <input type="text" class="form-control bg-light" id="input-username-login" placeholder="Username" style="font-weight: bold;" required>
+            <br>
+            <span style="font-weight: bold;">Password</span>
+            <input type="password" class="form-control bg-light" id="input-password-login" placeholder="Password" style="font-weight: bold;" required>
+            <p id="feedback-msg-login"></p>
+            <br>
+            <button type="submit" class="btn" id="btnLogin">Login.</button>
+          </div>
+          <div class="modal-footer border-0 justify-content-center">
+            <span style="font-weight: bold;">Don't have account?.........</span>
+            <button class="ToggleSignup" data-bs-toggle="modal" data-bs-target="#modal-signup" data-bs-dismiss="modal">Sign Up</button>
+          </div>
+        </form>
       </div>
-      <button type="submit" class="btn btn-primary h-50" onclick="readList()">
-        <i class="bi bi-arrow-clockwise"> Recheck-List</i>
+    </div>
+  </div>
+  <div class="modal" id="modal-signup" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="col-12 modal-title text-center" style="font-size: 2.5rem; font-weight: bold;">Sign Up.</h5>
+        </div>
+        <form id="login-form">
+          <div class="modal-body mb-5 border-0">
+            <span style="font-weight: bold;">Display Name</span>
+            <input type="text" class="form-control bg-light" id="input-name-signup" placeholder="Title" style="font-weight: bold;" required>
+            <br>
+            <span style="font-weight: bold;">Username</span>
+            <input type="text" class="form-control bg-light" id="input-username-signup" placeholder="Username" style="font-weight: bold;" required>
+            <br>
+            <span style="font-weight: bold;">Password</span>
+            <input type="password" class="form-control bg-light" id="input-password-signup" placeholder="Password" style="font-weight: bold;" required>
+            <p id="feedback-msg-signup"></p>
+            <br>
+            <button type="submit" class="btn" id="btnSignup">Register.</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container d-flex flex-column align-items-center">
+      <img src="image/LobbyLogo.png" id="MainLogo" width="550px" height="200px">
+      <button type="button" id="btnPlay" class="btn btn-lg">
+        <img src="image/sword.png" width="75px" height="75px" style="margin-right: 4rem;">
+        <span>Play game</span>
       </button>
-    </div>
-    <div id="main-content"></div>
-    <hr>
-
-    <div>
-      <h4>Add Player and Score</h4>
-    </div>
-    <div class="input-group mb-3 d-flex">
-      <span class="input-group-text" id="basic-addon1">
-        <i class="bi bi-layout-text-sidebar"></i>
-      </span>
-      <input type="text" id="playerName" class="form-control" placeholder="Enter player's name" aria-label="Username" aria-describedby="basic-addon1">
-      <input type="number" id="playerScore" class="form-control" placeholder="Enter player's score" aria-label="Username" aria-describedby="basic-addon1">
-      <button class="btn btn-warning" type="submit" onclick="addList()">Submit</button>
-    </div>
+      <button type="button" id="btnLeaderboard" class="btn btn-lg">
+        <img src="image/trophy.png" width="75px" height="75px" style="margin-right: 4rem;">
+        LeaderBoard
+      </button>
+      <button type="button" id="btnHow" class="btn btn-lg">
+        <img src="image/gun-pointer.png" width="55px" height="px" style="margin-right: 2.5rem;">
+        <span>How to Play</span>
+      </button>
   </div>
 
   <script>
@@ -54,5 +111,6 @@
   </script>
   <script src="insert_data.js"></script>
   <script src="read_data.js"></script>
+  <script src="auth.js"></script>
 </body>
 </html>
