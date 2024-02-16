@@ -18,10 +18,10 @@
   <div class="navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="image/LogoWithText.png" width="500px" height="80px">
+        <img src="image/LogoWithText.png" class="logged-out" width="500px" height="80px">
       </a>
       <nav class="navbar navbar-expand-lg">
-        <button type="button" id="btnSetting" class="btn btn-lg">
+        <button type="button" id="btnSetting" class="btn btn-lg" data-bs-toggle="modal" data-bs-target="#modal-setting">
           <i class="bi bi-gear"></i>
         </button>
         <button type="button" id="btnLogIn" class="btn btn-sm logged-out" data-bs-toggle="modal" data-bs-target="#modal-login">
@@ -36,10 +36,10 @@
         <div class="modal-header border-0">
           <h5 class="col-12 modal-title text-center" style="font-size: 2.5rem; font-weight: bold;">Sign In.</h5>
         </div>
-        <form id="login-form">
+        <form id="setting-form">
           <div class="modal-body mb-5 border-0">
-            <span style="font-weight: bold;">Username</span>
-            <input type="text" class="form-control bg-light" id="input-username-login" placeholder="Username" style="font-weight: bold;" required>
+            <span style="font-weight: bold;">Email</span>
+            <input type="email" class="form-control bg-light" id="input-email-login" placeholder="Email" style="font-weight: bold;" required>
             <br>
             <span style="font-weight: bold;">Password</span>
             <input type="password" class="form-control bg-light" id="input-password-login" placeholder="Password" style="font-weight: bold;" required>
@@ -61,13 +61,13 @@
         <div class="modal-header border-0">
           <h5 class="col-12 modal-title text-center" style="font-size: 2.5rem; font-weight: bold;">Sign Up.</h5>
         </div>
-        <form id="login-form">
-          <div class="modal-body mb-5 border-0">
+        <form id="signup-form">
+          <div class="modal-body mb-4 border-0">
             <span style="font-weight: bold;">Display Name</span>
             <input type="text" class="form-control bg-light" id="input-name-signup" placeholder="Title" style="font-weight: bold;" required>
             <br>
-            <span style="font-weight: bold;">Username</span>
-            <input type="text" class="form-control bg-light" id="input-username-signup" placeholder="Username" style="font-weight: bold;" required>
+            <span style="font-weight: bold;">Email</span>
+            <input type="email" class="form-control bg-light" id="input-email-signup" placeholder="Email" style="font-weight: bold;" required>
             <br>
             <span style="font-weight: bold;">Password</span>
             <input type="password" class="form-control bg-light" id="input-password-signup" placeholder="Password" style="font-weight: bold;" required>
@@ -79,17 +79,56 @@
       </div>
     </div>
   </div>
+  <div class="modal" id="modal-howtoplay" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" style="font-size: 2.5rem; font-weight: bold;">How To Play.</h5>
+        </div>
+        <form id="howToplay-form">
+          <div class="modal-body border-0">
+            <span>1 Choose your move just like normal Tic Tac Toe</span>
+            <img src="image/howToplay_1.jpg" class="d-flex mx-auto" width="250px" height="200px">
+            <br>
+            <button type="button" class="btn mb-4" id="btnNext" style="float: right;">Next ></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="modal-setting" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="col-12 modal-title text-center" style="font-size: 2.5rem; font-weight: bold;">Setting.</h5>
+        </div>
+        <form id="login-form">
+          <div class="modal-body mb-5 border-0 text-center">
+            <h5>Volume</h5>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary" type="button" id="btnDecrease">-</button>
+              </div>
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="btnIncrease">+</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
   <div class="container d-flex flex-column align-items-center">
-      <img src="image/LobbyLogo.png" id="MainLogo" width="550px" height="200px">
-      <button type="button" id="btnPlay" class="btn btn-lg">
+      <img src="image/LobbyLogo.png" class="logged-out" id="MainLogo" width="550px" height="200px">
+      <button type="button" id="btnPlay" class="btn btn-lg logged-out">
         <img src="image/sword.png" width="75px" height="75px" style="margin-right: 4rem;">
         <span>Play game</span>
       </button>
-      <button type="button" id="btnLeaderboard" class="btn btn-lg">
+      <button type="button" id="btnLeaderboard" class="btn btn-lg logged-out">
         <img src="image/trophy.png" width="75px" height="75px" style="margin-right: 4rem;">
-        LeaderBoard
+        <span>LeaderBoard</span>
       </button>
-      <button type="button" id="btnHow" class="btn btn-lg">
+      <button type="button" id="btnHow" class="btn btn-lg logged-out" data-bs-toggle="modal" data-bs-target="#modal-howtoplay">
         <img src="image/gun-pointer.png" width="55px" height="px" style="margin-right: 2.5rem;">
         <span>How to Play</span>
       </button>

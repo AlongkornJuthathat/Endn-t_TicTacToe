@@ -3,10 +3,7 @@ body {
     font-family: "Trirong", serif;
 }
 
-.navbar {
-    background-color: rgba(205,79,65,255);
-    padding: 0%;
-}
+/* -------------------------button zone --------------------------------*/
 
 #btnSetting {
     background-color: rgba(222,158,70,255);
@@ -27,16 +24,6 @@ body {
     padding: 0% 2rem;
     padding-top: 0%;
     padding-bottom: 0%;
-}
-
-.container-fluid {
-    padding: 0%;
-    padding-left: 2%;
-}
-
-#MainLogo {
-    margin-top: 3rem;
-    margin-left: 7rem;
 }
 
 #btnPlay {
@@ -92,4 +79,28 @@ body {
     border: none; 
     color: rgba(205,79,65,255);
     font-weight: bold;
+}
+
+#btnNext {
+    background-color: rgba(45,128,119,255);
+    color: white;
+    font-weight: bold;
+    width: 6rem;
+}
+
+/* -------------------------button zone --------------------------------*/
+
+.navbar {
+    background-color: rgba(205,79,65,255);
+    padding: 0%;
+}
+
+.container-fluid {
+    padding: 0%;
+    padding-left: 2%;
+}
+
+#MainLogo {
+    margin-top: 3rem;
+    margin-left: 7rem;
 }
