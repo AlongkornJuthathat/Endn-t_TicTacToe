@@ -17,7 +17,9 @@
 <body>
   <div class="navbar">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"></a>
+      <a class="navbar-brand" href="#">
+        <img src="image/LogoWithText.png" width="500px" height="80px">
+      </a>
       <nav class="navbar navbar-expand-lg">
         <button type="button" id="btnSetting" class="btn btn-lg" data-bs-toggle="modal" data-bs-target="#modal-setting">
           <i class="bi bi-gear"></i>
@@ -116,20 +118,28 @@
       </div>
     </div>
   </div>
-  <div class="container d-flex flex-column align-items-center">
-      <img src="image/LobbyLogo.png" id="MainLogo" width="550px" height="200px">
-      <a href="select_mode.html" type="button" id="btnPlay" class="btn btn-lg d-flex align-items-center justify-content-center">
-        <img src="image/sword.png" width="75px" height="75px" style="margin-right: 4rem;">
-        <span>Play game</span>
+  <nav>
+    <div class="container-fluid mt-3">
+      <a href="index.html" type="button" class="btn" id="btnBack">
+        <i class="bi bi-arrow-left"></i>
+        <span>Back</span>
       </a>
-      <a type="button" id="btnLeaderboard" class="btn btn-lg d-flex align-items-center justify-content-center">
-        <img src="image/trophy.png" width="75px" height="75px" style="margin-right: 4rem;">
-        <span>LeaderBoard</span>
-      </a>
-      <a type="button" id="btnHow" class="btn btn-lg d-flex align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#modal-howtoplay">
-        <img src="image/gun-pointer.png" width="55px" height="px" style="margin-right: 2.5rem;">
-        <span>How to Play</span>
-      </a>
+      <span id="text-playgame">Play game</span>
+    </div>
+  </nav>
+  <div class="container" style="padding-top: 10rem;">
+    <div class="row justify-content-center">
+      <button type="button" id="btnQuick" class="btn col-4 d-flex flex-column align-items-center">
+        <i class="bi bi-lightning" id="icon-mode"></i>
+        <span id="text-mode-green">Quick</span>
+        <span id="text-mode-red">match</span>
+      </button>
+      <button type="button" id="btnFriend" class="btn col-4 d-flex flex-column align-items-center">
+        <i class="bi bi-people" id="icon-mode"></i>
+        <span id="text-mode-green">Friend</span>
+        <span id="text-mode-red">match</span>
+      </button>
+    </div>
   </div>
 
   <script>

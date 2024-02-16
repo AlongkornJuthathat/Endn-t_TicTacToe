@@ -88,6 +88,32 @@ body {
     width: 6rem;
 }
 
+#btnBack {
+    background: white;
+    box-shadow: 0px 5px rgba(21,48,57,255);
+    color: rgba(222,158,70,255);
+    font-size: 2.5rem;
+    font-weight: bold;
+    width: 12rem;
+}
+
+#btnQuick {
+    background-color: white;
+    width: 22rem;
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+    box-shadow: 0px 7px rgba(21,48,57,255);
+    margin-right: 15rem;
+}
+
+#btnFriend {
+    background-color: white;
+    width: 22rem;
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+    box-shadow: 0px 7px rgba(21,48,57,255);
+}
+
 /* -------------------------button zone --------------------------------*/
 
 .navbar {
@@ -103,4 +129,29 @@ body {
 #MainLogo {
     margin-top: 3rem;
     margin-left: 7rem;
+}
+
+#text-mode-green {
+    color: rgba(45,128,119,255); 
+    font-weight: bold; 
+    font-size: 4rem;
+}
+
+#text-mode-red {
+    color: rgba(205,79,65,255);
+    font-weight: bold; 
+    font-size: 2.5rem;
+}
+
+#icon-mode {
+    color: rgba(222,158,70,255); 
+    font-size: 5rem;
+}
+
+#text-playgame {
+    font-size: 2.5rem; 
+    color: rgba(222,158,70,255); 
+    font-weight: bold; 
+    vertical-align: middle; 
+    padding-left: 1rem;
 }
