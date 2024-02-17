@@ -1,3 +1,4 @@
+
 const signupForm = document.querySelector("#signup-form");
 signupForm.addEventListener("submit", createUser);
 
@@ -73,11 +74,19 @@ btnCancels.forEach((btn) => {
 });
 
 firebase.auth().onAuthStateChanged((user) => {
-    if (user) {
-        console.log("User: ", user);
-        // getList(user);
+    const currentUser = firebase.auth().currentUser;
+    if (user){
+        var userRef = firebase.database().ref('users/' + currentUser.uid + '/username');
+        userRef.once("value", (snapshot) => {
+            var data = snapshot.val();
+            console.log(data);
+            document.getElementById('btnLogIn').innerText = data;
+        });
+    } else {
+        document.querySelector("#btnLogIn").innerText = "Login";
     }
-    setupUI(user);
+    console.log("User: ", user);
+    //setupUI(user);
 });
 
 const btnLogout = document.querySelector("#btnLogOut");
