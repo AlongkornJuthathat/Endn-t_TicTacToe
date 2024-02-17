@@ -114,22 +114,52 @@ body {
     box-shadow: 0px 7px rgba(21,48,57,255);
 }
 
+#btnJoin {
+    background-color: white;
+    box-shadow: 0px 7px rgba(21,48,57,255);
+    width: 15rem;
+}
+
+#btnCreateRoom {
+    background-color: white;
+    box-shadow: 0px 7px rgba(21,48,57,255);
+    width: 100%;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#table-field {
+    max-width: 420px;
+    max-height: 420px;
+    width: 85vw;
+    height: 85vw;
+    border-spacing: 4px 2px;
+}
+
+#td-field {
+    padding: 4px;
+    width: 33%;
+    height: 33%;
+}
+
+.channel{
+    font-size: 3.4em;
+    font-size: 16vmin;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0px 3px 0px  #000;
+}
+.channel:hover{
+    background-color: hsl(0, 0%, 80%);
+    transition: 0.25s;
+}
+
 /* -------------------------button zone --------------------------------*/
 
-.navbar {
-    background-color: rgba(205,79,65,255);
-    padding: 0%;
-}
-
-.container-fluid {
-    padding: 0%;
-    padding-left: 2%;
-}
-
-#MainLogo {
-    margin-top: 3rem;
-    margin-left: 7rem;
-}
+/* -------------------------text zone --------------------------------*/
 
 #text-mode-green {
     color: rgba(45,128,119,255); 
@@ -148,10 +178,94 @@ body {
     font-size: 5rem;
 }
 
-#text-playgame {
+#text-goBack {
     font-size: 2.5rem; 
     color: rgba(222,158,70,255); 
     font-weight: bold; 
     vertical-align: middle; 
     padding-left: 1rem;
+}
+
+th {
+    color: rgba(205,79,65,255);
+}
+
+#text-modal-head {
+    font-size: 2.5rem; 
+    font-weight: bold;
+}
+
+#text-modal-body {
+    font-weight: bold;
+}
+
+#text-roomcode {
+    font-weight: bold; 
+    color: rgba(205,79,65,255); 
+    font-size: 3rem;
+}
+
+#input-friend-join {
+    font-weight: bold; 
+    font-size: 3rem;
+    box-shadow: 0px 7px rgba(21,48,57,255);
+}
+
+#text-join {
+    color: rgba(45,128,119,255); 
+    font-weight: bold; 
+    font-size: 3rem;
+    margin-left: 1rem;
+}
+
+#text-OR {
+    color: rgba(45,128,119,255); 
+    font-weight: bold; 
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#text-Create {
+    color: rgba(45,128,119,255); 
+    margin-left: 1rem;
+}
+
+#text-Room {
+    color: rgba(205,79,65,255);
+    margin-left: 1rem;
+}
+
+#icon-plus {
+    color: rgba(222,158,70,255); 
+}
+
+/* -------------------------text zone --------------------------------*/
+
+.navbar {
+    background-color: rgba(205,79,65,255);
+    padding: 0%;
+}
+
+.container-fluid {
+    padding: 0%;
+    padding-left: 2%;
+}
+
+#MainLogo {
+    margin-top: 3rem;
+    margin-left: 7rem;
+}
+
+#leaderTable {
+    background-color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+#join-icon {
+    color: rgba(222,158,70,255); 
+    font-size: 3rem;
 }

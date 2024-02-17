@@ -15,6 +15,8 @@
   <title>Endn't TicTacToe</title>
 </head>
 <body>
+
+  <!-- Header -->
   <div class="navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
@@ -30,47 +32,51 @@
       </nav>
     </div>
   </div>
-  <div class="modal" id="modal-login" tabindex="-1">
-    <div class="modal-dialog">
+
+  <!-- Modal Login -->
+  <div class="modal fade" id="modal-login" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header border-0">
-          <h5 class="col-12 modal-title text-center" style="font-size: 2.5rem; font-weight: bold;">Sign In.</h5>
+          <h5 class="col-12 modal-title text-center" id="text-modal-head">Sign In.</h5>
         </div>
-        <form id="setting-form">
+        <form id="login-form">
           <div class="modal-body mb-5 border-0">
-            <span style="font-weight: bold;">Email</span>
-            <input type="email" class="form-control bg-light" id="input-email-login" placeholder="Email" style="font-weight: bold;" required>
+            <span id="text-modal-body">Email</span>
+            <input type="email" class="form-control bg-light" id="input-email-login" placeholder="Email" required>
             <br>
-            <span style="font-weight: bold;">Password</span>
-            <input type="password" class="form-control bg-light" id="input-password-login" placeholder="Password" style="font-weight: bold;" required>
+            <span id="text-modal-body">Password</span>
+            <input type="password" class="form-control bg-light" id="input-password-login" placeholder="Password" required>
             <p id="feedback-msg-login"></p>
             <br>
             <button type="submit" class="btn" id="btnLogin">Login.</button>
           </div>
           <div class="modal-footer border-0 justify-content-center">
-            <span style="font-weight: bold;">Don't have account?.........</span>
+            <span id="text-modal-body">Don't have account?.........</span>
             <button class="ToggleSignup" data-bs-toggle="modal" data-bs-target="#modal-signup" data-bs-dismiss="modal">Sign Up</button>
           </div>
         </form>
       </div>
     </div>
   </div>
+
+  <!-- Modal Signup -->
   <div class="modal" id="modal-signup" tabindex="-1">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header border-0">
-          <h5 class="col-12 modal-title text-center" style="font-size: 2.5rem; font-weight: bold;">Sign Up.</h5>
+          <h5 class="col-12 modal-title text-center" id="text-modal-head">Sign Up.</h5>
         </div>
         <form id="signup-form">
           <div class="modal-body mb-4 border-0">
-            <span style="font-weight: bold;">Display Name</span>
-            <input type="text" class="form-control bg-light" id="input-name-signup" placeholder="Title" style="font-weight: bold;" required>
+            <span id="text-modal-body">Display Name</span>
+            <input type="text" class="form-control bg-light" id="input-name-signup" placeholder="Title" required>
             <br>
-            <span style="font-weight: bold;">Email</span>
-            <input type="email" class="form-control bg-light" id="input-email-signup" placeholder="Email" style="font-weight: bold;" required>
+            <span id="text-modal-body">Email</span>
+            <input type="email" class="form-control bg-light" id="input-email-signup" placeholder="Email" required>
             <br>
-            <span style="font-weight: bold;">Password</span>
-            <input type="password" class="form-control bg-light" id="input-password-signup" placeholder="Password" style="font-weight: bold;" required>
+            <span id="text-modal-body">Password</span>
+            <input type="password" class="form-control bg-light" id="input-password-signup" placeholder="Password" required>
             <p id="feedback-msg-signup"></p>
             <br>
             <button type="submit" class="btn" id="btnSignup">Register.</button>
@@ -79,30 +85,15 @@
       </div>
     </div>
   </div>
-  <div class="modal" id="modal-howtoplay" tabindex="-1">
-    <div class="modal-dialog">
+
+  <!-- Modal Setting -->
+  <div class="modal fade" id="modal-setting" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header border-0">
-          <h5 class="modal-title" style="font-size: 2.5rem; font-weight: bold;">How To Play.</h5>
+          <h5 class="col-12 modal-title text-center" id="text-modal-head">Setting.</h5>
         </div>
-        <form id="howToplay-form">
-          <div class="modal-body border-0">
-            <span>1 Choose your move just like normal Tic Tac Toe</span>
-            <img src="image/howToplay_1.jpg" class="d-flex mx-auto" width="250px" height="200px">
-            <br>
-            <button type="button" class="btn mb-4" id="btnNext" style="float: right;">Next ></button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  <div class="modal" id="modal-setting" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header border-0">
-          <h5 class="col-12 modal-title text-center" style="font-size: 2.5rem; font-weight: bold;">Setting.</h5>
-        </div>
-        <form id="login-form">
+        <form id="setting-form">
           <div class="modal-body mb-5 border-0 text-center">
             <h5>Volume</h5>
             <div class="input-group">
@@ -118,13 +109,15 @@
       </div>
     </div>
   </div>
+
+  <!-- Select Game Mode -->
   <nav>
     <div class="container-fluid mt-3">
       <a href="index.html" type="button" class="btn" id="btnBack">
         <i class="bi bi-arrow-left"></i>
         <span>Back</span>
       </a>
-      <span id="text-playgame">Play game</span>
+      <span id="text-goBack">Play game</span>
     </div>
   </nav>
   <div class="container" style="padding-top: 10rem;">
@@ -134,11 +127,11 @@
         <span id="text-mode-green">Quick</span>
         <span id="text-mode-red">match</span>
       </button>
-      <button type="button" id="btnFriend" class="btn col-4 d-flex flex-column align-items-center">
+      <a href="friend_match.html" type="button" id="btnFriend" class="btn col-4 d-flex flex-column align-items-center">
         <i class="bi bi-people" id="icon-mode"></i>
         <span id="text-mode-green">Friend</span>
         <span id="text-mode-red">match</span>
-      </button>
+      </a>
     </div>
   </div>
 
@@ -156,6 +149,7 @@
     };
   firebase.initializeApp(firebaseConfig)
   </script>
+  <script src="normal_script.js"></script>
   <script src="insert_data.js"></script>
   <script src="read_data.js"></script>
   <script src="auth.js"></script>
