@@ -26,6 +26,7 @@ function createUser(event) {
         firebase.database().ref('users/' + user.uid).set({
             username: Displayname,
             email: email,
+            id : user.uid,
             score: 0,
           });
         setTimeout(() => {
@@ -36,7 +37,7 @@ function createUser(event) {
     })
     .catch((error) => {
         signupFeedback.style = "color: crimson";
-        signupFeedback.innerHTML = `<i class='bi bi-exclamation-triangle-fill'></i> ${error.message}.`;
+        signupFeedback.innerHTML = `<i class='bi bi-exclamation-triangle-fill'></i> ${error.message}`;
         signupForm.reset();
     })
 }
@@ -57,7 +58,7 @@ function loginUser(event){
     })
     .catch((error) => {
         loginFeedback.style = "color: crimson";
-        loginFeedback.innerHTML = `<i class='bi bi-exclamation-triangle-fill'></i> ${error.message}`
+        loginFeedback.innerHTML = `<i class='bi bi-exclamation-triangle-fill'></i> Email or Password is Incorrect`
         loginForm.reset();
     })
 }
@@ -73,24 +74,40 @@ btnCancels.forEach((btn) => {
     })
 });
 
+
 firebase.auth().onAuthStateChanged((user) => {
     const currentUser = firebase.auth().currentUser;
     if (user){
-        var userRef = firebase.database().ref('users/' + currentUser.uid + '/username');
-        userRef.once("value", (snapshot) => {
+        var userNameRef = firebase.database().ref('users/' + currentUser.uid + '/username');
+        var userScoreRef = firebase.database().ref('users/' + currentUser.uid + '/score');
+        userNameRef.once("value", (snapshot) => {
             var data = snapshot.val();
             console.log(data);
-            document.getElementById('btnLogIn').innerText = data;
+            document.getElementById('btnAccount').innerHTML = data + " <i class='bi bi-person'></i>";
+            document.getElementById('DisplayName').innerHTML = data;
+        });
+
+        userScoreRef.once("value", (snapshot) => {
+            var data = snapshot.val();
+            console.log(data);
+            document.getElementById('UserScore').innerHTML = data;
         });
     } else {
-        document.querySelector("#btnLogIn").innerText = "Login";
+        document.querySelector("#btnLogIn").innerHTML = "Login <i class='bi bi-person'></i>";
     }
     console.log("User: ", user);
-    //setupUI(user);
+    setupUI(user);
 });
 
 const btnLogout = document.querySelector("#btnLogOut");
 btnLogout.addEventListener("click", function() {
     firebase.auth().signOut();
     console.log("Logout Completed.");
+    alert("Logout Completed!");
 })
+
+if (user !== null) {
+    const displayName = user.displayName;
+    const Email = user.email;
+    const Password = user.password;
+}

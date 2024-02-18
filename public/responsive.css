@@ -1,0 +1,97 @@
+@media screen and (max-width: 992px) {
+    #MainLogo {
+        width: 300px;
+        height: 120px;
+    }
+    #main-icon {
+        width: 70px;
+        height: 70px;
+    }
+    #sub-icon {
+        width: 50px;
+        height: 50px;
+    }
+    #btnPlay {
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+    #btnLeaderboard {
+        font-size: 2rem;
+        margin-top: 1.5rem;
+    }
+    #btnHow {
+        font-size: 1rem;
+        margin-top: 1.5rem;
+    }
+    #btnSetting {
+        height: 4rem;
+        font-size: 2rem;
+    }
+    #btnLogIn {
+        height: 4rem;
+        font-size: 2rem;
+    }
+    #btnAccount {
+        height: 4rem;
+        font-size: 2rem;
+    }
+    #container-index {
+        margin-top: 2rem;
+    }
+    #btnLogOut {
+        font-size: 1rem;
+    }
+    #btnProfile {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #MainLogo {
+        width: 200px;
+        height: 70px;
+    }
+    #main-icon {
+        width: 50px;
+        height: 50px;
+    }
+    #sub-icon {
+        width: 20px;
+        height: 20px;
+    }
+    #btnPlay {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+    #btnLeaderboard {
+        font-size: 1rem;
+        margin-top: 0.75rem;
+    }
+    #btnHow {
+        font-size: 0.5rem;
+        margin-top: 0.75rem;
+    }
+    #btnSetting {
+        height: 2rem;
+        font-size: 1rem;
+    }
+    #btnLogIn {
+        height: 2rem;
+        font-size: 1rem;
+        padding: 0% 1rem;
+    }
+    #btnAccount {
+        height: 2rem;
+        font-size: 1rem;
+        padding: 0% 1rem;
+    }
+    #container-index {
+        margin-top: 1rem;
+    }
+    #btnLogOut {
+        font-size: 0.5rem;
+    }
+    #btnProfile {
+        font-size: 0.5rem;
+    }
+}

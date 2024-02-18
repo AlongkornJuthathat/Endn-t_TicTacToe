@@ -3,6 +3,13 @@ body {
     font-family: "Trirong", serif;
 }
 
+:root {
+    --bg-playerdisplay: #F9EFDB;
+    --red: #FF4B4B;
+    --blue: #2B70C9;
+    --yellow: rgba(222,158,70,255);
+}
+
 /* -------------------------button zone --------------------------------*/
 
 #btnSetting {
@@ -19,27 +26,25 @@ body {
     background-color: rgba(45,128,119,255);
     color: rgba(222,158,70,255);
     border-radius: 0;
-    font-size: 3rem;
+    font-size: 3.5rem;
     height: 6rem;
     padding: 0% 2rem;
-    padding-top: 0%;
-    padding-bottom: 0%;
 }
 
 #btnPlay {
-    height: 8rem;
-    width: 50%;
+    /* height: 8rem;
+    width: 50%; */
     background-color: white;
     color: rgba(45,128,119,255);
     font-weight: bold;
     font-family: "Trirong", serif;
     font-size: 3rem;
-    margin-top: 7rem;
+    margin-top: 3rem;
     box-shadow: 0px 5px rgba(21,48,57,255);
 }
 #btnLeaderboard {
-    height: 8rem;
-    width: 50%;
+    /* height: 8rem;
+    width: 50%; */
     background-color: white;
     color: rgba(205,79,65,255);
     font-weight: bold;
@@ -49,8 +54,8 @@ body {
     box-shadow: 0px 5px rgba(21,48,57,255);
 }
 #btnHow {
-    height: 5rem;
-    width: 30%;
+    /* height: 5rem;
+    width: 30%; */
     background-color: white;
     color: rgba(222,158,70,255);
     font-weight: bold;
@@ -128,39 +133,44 @@ body {
     font-weight: bold;
 }
 
-#table-field {
-    max-width: 420px;
-    max-height: 420px;
-    width: 85vw;
-    height: 85vw;
-    border-spacing: 4px 2px;
+#btnAccount {
+    background-color: rgba(45,128,119,255);
+    color: rgba(222,158,70,255);
+    border-radius: 0;
+    font-size: 3rem;
+    height: 6rem;
+    padding: 0% 2rem;
+    padding-top: 0%;
+    padding-bottom: 0%;
 }
 
-#td-field {
-    padding: 4px;
-    width: 33%;
-    height: 33%;
+#btnLogOut {
+    color: rgba(205,79,65,255);
+    font-weight: bold; 
+    font-size: 1.5rem;
 }
 
-.channel{
-    font-size: 3.4em;
-    font-size: 16vmin;
-    height: 100%;
+#btnProfile {
+    color: rgba(45,128,119,255);
+    font-weight: bold; 
+    font-size: 1.5rem;
+}
+
+#btnChange {
+    background-color: rgba(45,128,119,255);
+    color: white;
     width: 100%;
-    border: none;
-    border-radius: 5px;
-    background-color: hsl(0, 0%, 100%);
-    box-shadow: 0px 3px 0px  #000;
-}
-.channel:hover{
-    background-color: hsl(0, 0%, 80%);
-    transition: 0.25s;
+    padding: 0.75rem 0%;
 }
 
 /* -------------------------button zone --------------------------------*/
 
 /* -------------------------text zone --------------------------------*/
-
+.handlee-regular {
+    font-family: "Handlee", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
 #text-mode-green {
     color: rgba(45,128,119,255); 
     font-weight: bold; 
@@ -197,6 +207,7 @@ th {
 
 #text-modal-body {
     font-weight: bold;
+    font-size: 1.5rem;
 }
 
 #text-roomcode {
@@ -241,6 +252,24 @@ th {
     color: rgba(222,158,70,255); 
 }
 
+#DisplayName {
+    font-size: 1.5rem;
+}
+
+#UserScore {
+    font-size: 1.5rem;
+}
+
+#main-icon {
+    width: 100px;
+    height: 100px;
+}
+
+#sub-icon {
+    width: 75px;
+    height: 75px;
+}
+
 /* -------------------------text zone --------------------------------*/
 
 .navbar {
@@ -254,8 +283,8 @@ th {
 }
 
 #MainLogo {
-    margin-top: 3rem;
-    margin-left: 7rem;
+    width: 500px ;
+    height: 200px;
 }
 
 #leaderTable {
@@ -268,4 +297,217 @@ th {
 #join-icon {
     color: rgba(222,158,70,255); 
     font-size: 3rem;
+}
+
+#container-index {
+    margin-top: 4rem;
+}
+
+/* -------------------------Lobby zone--------------------------------*/
+#lobby_playerOne {
+    background-color: var(--bg-playerdisplay);
+    border-radius: 10px;
+    border: 10px solid var(--red);
+    width: 547px;
+    height: 377px;
+}
+#vsText {
+    font-size: 80px;
+    font-family: "Nothing You Could Do", cursive;
+    font-weight: 600;
+}
+#lobby_playerTwo {
+    background-color: var(--bg-playerdisplay);
+    border-radius: 10px;
+    border: 10px solid var(--blue);
+    width: 547px;
+    height: 377px;
+}
+#textRoomcode {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: var(--red);
+}
+#num-roomcode {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    background-color: white;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0px 7px 0px #000;
+}
+#btnCopy {
+    background-color: var(--yellow);
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0px 7px 0px #000;
+}
+
+/* -------------------------Field container zone--------------------------------*/
+.nothing-you could do-regular {
+    font-family: "Nothing You Could Do", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.fredoka {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+#table-field {
+    max-width: 550px;
+    max-height: 550px;
+    width: 100vw;
+    height: 100vw;
+    border-spacing: 4px 2px;
+}
+
+#td-field {
+    padding: 4px;
+    width: 33%;
+    height: 33%;
+}
+#navfield {
+    margin: 0;
+    margin-bottom: 20px;
+}
+#timeblock {
+    margin: 0;
+}
+#countTime {
+    font-family: "Nothing You Could Do", cursive;
+    font-weight: 400;
+    font-size: 60px;
+    color: var(--yellow);
+    margin: 0;
+    margin-left: 1rem;
+}
+#countTurn {
+    font-family: "Nothing You Could Do", cursive;
+    font-weight: 400;
+    font-size: 45px;
+    color: var(--yellow);
+    margin: 0;
+    margin-left: 1rem;
+}
+#logoplayerNav {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    background-color: var(--red);
+    color: white;
+    width: 120px;
+    height: 120px;
+    border-radius: 9999px;
+    font-size: 90px;
+    z-index: 1;
+}
+.channel{
+    font-size: 3.4em;
+    font-size: 16vmin;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0px 3px 0px  #000;
+}
+.channel:hover{
+    background-color: hsl(0, 0%, 80%);
+    transition: 0.25s;
+}
+
+#layerTop {
+    margin: 0;
+    font-family: "Nothing You Could Do", cursive;
+    font-weight: 800;
+    font-style: normal;
+}
+#layerBottom {
+    margin: 0;
+    font-family: "Nothing You Could Do", cursive;
+    font-weight: 600;
+    font-style: normal;
+}
+#logoplayer1 {
+    text-align: center;
+    background-color: var(--red);
+    width: 153px;
+    height: 153px;
+    border-radius: 9999px;
+    z-index: 1;
+    margin-bottom: -50px;
+}
+#logoplayer2 {
+    text-align: center;
+    background-color: var(--blue);
+    width: 153px;
+    height: 153px;
+    border-radius: 9999px;
+    z-index: 1;
+    margin-bottom: -50px;
+}
+#textlogo {
+    text-align: center;
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    color: white;
+    font-size: 100px;
+    margin: 0;
+}
+#playerOne {
+    background-color: var(--bg-playerdisplay);
+    border-radius: 10px;
+    border: 10px solid var(--red);
+    width: 329px;
+    height: 377px;
+    padding-top: 5rem;
+}
+#player1 {
+    margin-bottom: -20px;
+    font-size: 30px;
+}
+#playerName1 {
+    margin: 0;
+    color: var(--red);
+    font-size: 70px;
+}
+#score1 {
+    margin-bottom: -30px;
+    font-size: 30px;
+}
+#numScore1 {
+    margin: 0;
+    color: var(--red);
+    font-size: 100px;
+}
+
+#playerTwo {
+    background-color: var(--bg-playerdisplay);
+    border-radius: 10px;
+    border: 10px solid var(--blue);
+    width: 329px;
+    height: 377px;
+    padding-top: 5rem;
+}
+#player2 {
+    margin-bottom: -20px;
+    font-size: 30px;
+}
+#playerName2 {
+    margin: 0;
+    color: var(--blue);
+    font-size: 70px;
+}
+#score2 {
+    margin-bottom: -30px;
+    font-size: 30px;
+}
+#numScore2 {
+    margin: 0;
+    color: var(--blue);
+    font-size: 100px;
 }

@@ -10,11 +10,16 @@
   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="responsive.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
   <title>Endn't TicTacToe</title>
 </head>
 <body>
@@ -146,33 +151,78 @@
     </div>
   </div>
 
-  <!-- Scoreboard -->
+  <!-- Table Field -->
   <nav>
     <div class="container-fluid mt-3">
       <a href="index.html" type="button" class="btn" id="btnBack">
         <i class="bi bi-arrow-left"></i>
-        <span>Back</span>
+        <span>Exit</span>
       </a>
-      <span id="text-goBack">Leader Board</span>
     </div>
   </nav>
-  <div class="container pt-5">
-    <div class="justify-content-center">
-      <table class="table table-bordered" id="leaderTable">
-        <thead>
-          <tr>
-            <th class="w-75">Name</th>
-            <th>Score</th>
-          </tr>
-        </thead>
-        <tbody id="forAddScore">
-          <!-- <tr>
-            <td>Name</td>
-            <td>Score</td>
-          </tr> -->
-        </tbody>
-      </table>
+  <div class="container-lg text-center">
+    <div class="row">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <div class="Roomcode" id="Roomcode">
+                <p class="textRoomcode" id="textRoomcode">Room Code</p>
+            </div>
+            <div class="numRoomcode container d-flex flex-row justify-content-center">
+                <div class="num-roomcode px-5 py-2" id="num-roomcode">
+                    <p class="num-code" id="num-code" style="margin: 0;">5784</p>
+                </div>
+                <a type="button" class="btn px-4 d-flex align-items-center" id="btnCopy">
+                    <i class="bi bi-copy" style="font-size: 30px;"></i>
+                </a>
+            </div>
+        </div>
     </div>
+
+    <div class="row" style="--bs-gutter-x: 0rem;">
+        <div class="col-xl-5 d-flex flex-column justify-content-center align-items-center">
+            <div class="logoplayer1 d-flex align-items-center justify-content-center" id="logoplayer1">
+              <p class="textlogo" id="textlogo">O</p>
+            </div>
+            <div class="container-xl d-flex flex-column justify-content-center align-items-center" id="lobby_playerOne">
+              <div class="layerTop" id="layerTop">
+                <p class="player1" id="player1">Player 1</p>
+                <p class="playerName1" id="playerName1">TiTle</p>
+              </div>
+              <div class="layerBottom" id="layerBottom">
+                <i class="bi bi-check-square-fill" style="font-size: 50px; color: #2D8077;"></i>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-xl-2 d-flex flex-row justify-content-center align-items-center">
+            <p class="vsText" id="vsText" style="color: var(--red);">V</p><p class="vsText" id="vsText" style="color: var(--blue);">S</p>
+        </div>
+
+        <div class="col-xl-5 d-flex flex-column justify-content-center align-items-center">
+          <div class="logoplayer2 d-flex align-items-center justify-content-center" id="logoplayer2">
+            <p class="textlogo" id="textlogo">X</p>
+          </div>
+          <div class="container-xl d-flex flex-column justify-content-center align-items-center" id="lobby_playerTwo">
+            <div class="layerTop" id="layerTop">
+              <p class="player2" id="player2">Player 2</p>
+              <p class="playerName2" id="playerName2">TeeNoDie</p>
+            </div>
+            <div class="layerBottom" id="layerBottom">
+                <i class="bi bi-x-square-fill" style="font-size: 50px; color: #CD4F41;"></i>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <div class="btn container d-flex flex-row justify-content-center">
+                <a type="button" class="btn px-4 d-flex align-items-center" id="btnCopy">
+                    <i class="bi bi-copy" style="font-size: 30px;"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
   </div>
 
   <script>

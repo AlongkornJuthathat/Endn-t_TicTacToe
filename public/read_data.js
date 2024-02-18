@@ -4,12 +4,11 @@ const loginItems = document.querySelectorAll(".logged-in");
 let setupUI = (user) => {
     const currentUser = firebase.auth().currentUser;
     if (user) {
-        onValue(ref(database, 'users/' + currentUser.uid + '/username'), (snapshot) => {
-            var data = snapshot.val();
-            console.log(data);
-            document.getElementById('btnLogIn').innerText = data;
-        });
+        loginItems.forEach((item) => (item.style.display = "inline-block"));
+        logoutItems.forEach((item) => (item.style.display = "none"));
     } else {
-            document.querySelector("#btnLogIn").innerText = "Login";
-        }
+        loginItems.forEach((item) => (item.style.display = "none"));
+        logoutItems.forEach((item) => (item.style.display = "inline-block"));
+        document.querySelector("#btnLogIn").innerHTML = "Login <i class='bi bi-person'></i>";
+    }
 }
