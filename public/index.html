@@ -29,16 +29,16 @@
         <button type="button" id="btnLogIn" class="btn btn-sm logged-out" data-bs-toggle="modal" data-bs-target="#modal-login">
           Login <i class="bi bi-person"></i>
         </button>
-        <nav class="btn-group">
-          <button type="button" id="btnAccount" class="btn btn-sm dropdown-toggle logged-in" data-bs-toggle="dropdown" data-display="static" aria-expanded="false"> 
+        <div class="dropdown">
+          <button type="button" id="btnAccount" class="btn btn-sm logged-in" data-bs-toggle="dropdown" aria-expanded="true"> 
             Account Name <i class="bi bi-person"></i>
           </button>
-          <ul class="dropdown-menu navbar-expand-lg" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu dropdown-menu-end" id="dropdown">
             <li><button type="button" class="btn dropdown-item" id="btnProfile" data-bs-toggle="modal" data-bs-target="#modal-profile">Profile <i class="bi bi-person-circle"></i></button></li>
             <li><hr class="dropdown-divider"></li>
             <li><button type="button" class="btn dropdown-item" id="btnLogOut">Log Out <i class="bi bi-box-arrow-in-right"></i></button></li>
           </ul>
-        </nav>
+        </div>
       </nav>
     </div>
   </div>
@@ -99,7 +99,7 @@
   <!-- Modal How to play -->
   <div class="modal" id="HowtoplayPage1" tabindex="-1">
     <div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered">
-      <div class="modal-content px-5">
+      <div class="modal-content" id="howtoplay-content">
         <div class="modal-header border-0">
           <h5 class="modal-title" id="text-htp-head">How To Play.</h5>
         </div>
@@ -117,7 +117,7 @@
   </div>
   <div class="modal" id="HowtoplayPage2" tabindex="-1">
     <div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered">
-      <div class="modal-content px-5">
+      <div class="modal-content" id="howtoplay-content">
         <div class="modal-header border-0">
           <h5 class="modal-title" id="text-htp-head">How To Play.</h5>
         </div>

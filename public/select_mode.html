@@ -23,7 +23,7 @@
   <div class="navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="image/LogoWithText.png" width="450px" height="75px">
+        <img id="navImg"src="image/LogoWithText.png" width="450px" height="75px">
       </a>
       <nav class="navbar navbar-expand-lg">
         <button type="button" id="btnSetting" class="btn btn-lg" data-bs-toggle="modal" data-bs-target="#modal-setting">
@@ -33,10 +33,10 @@
           Login <i class="bi bi-person"></i>
         </button>
         <div class="btn-group">
-          <button type="button" id="btnAccount" class="btn btn-sm dropdown-toggle logged-in" data-bs-toggle="dropdown" aria-expanded="false"> 
+          <button type="button" id="btnAccount" class="btn btn-sm logged-in" data-bs-toggle="dropdown" aria-expanded="false"> 
             Account Name <i class="bi bi-person"></i>
           </button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu dropdown-menu-end">
             <li><button type="button" class="btn dropdown-item" id="btnProfile" data-bs-toggle="modal" data-bs-target="#modal-profile">Profile <i class="bi bi-person-circle"></i></button></li>
             <li><hr class="dropdown-divider"></li>
             <li><button type="button" class="btn dropdown-item" id="btnLogOut">Log Out <i class="bi bi-box-arrow-in-right"></i></button></li>
@@ -139,7 +139,7 @@
             <span id="UserScore">473450</span>
             <p id="feedback-msg-signup"></p>
             <br>
-            <button type="submit" class="btn" id="btnChange">Save Change.</button>
+            <button type="submit" class="btn" id="btnChange">Close.</button>
           </div>
         </form>
       </div>
@@ -156,18 +156,36 @@
       <span id="text-goBack">Play game</span>
     </div>
   </nav>
-  <div class="container" style="padding-top: 10rem;">
-    <div class="row justify-content-center">
-      <button type="button" id="btnQuick" class="btn col-4 d-flex flex-column align-items-center">
-        <i class="bi bi-lightning" id="icon-mode"></i>
-        <span id="text-mode-green">Quick</span>
-        <span id="text-mode-red">match</span>
-      </button>
-      <a href="friend_match.html" type="button" id="btnFriend" class="btn col-4 d-flex flex-column align-items-center">
-        <i class="bi bi-people" id="icon-mode"></i>
-        <span id="text-mode-green">Friend</span>
-        <span id="text-mode-red">match</span>
-      </a>
+  <div class="container" id="mode-container">
+    <div class="justify-content-center">
+      <table class="table table-borderless" id="mode-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th id="MiddleTableMode"></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="LeftandRightTable">
+              <a href="#" type="button" id="btnQuick" class="btn col-4 d-flex flex-column align-items-center w-100">
+                <i class="bi bi-lightning" id="icon-mode"></i>
+                <span id="text-mode-green">Quick</span>
+                <span id="text-mode-red">match</span>
+              </a>
+            </td>
+            <td></td>
+            <td>
+              <a href="friend_match.html" type="button" id="btnFriend" class="btn col-4 d-flex flex-column align-items-center w-100">
+                <i class="bi bi-people" id="icon-mode"></i>
+                <span id="text-mode-green">Friend</span>
+                <span id="text-mode-red">match</span>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
@@ -189,5 +207,6 @@
   <script src="insert_data.js"></script>
   <script src="read_data.js"></script>
   <script src="auth.js"></script>
+  <script src="create_room.js"></script>
 </body>
 </html>

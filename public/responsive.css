@@ -1,4 +1,164 @@
+@media screen and (max-width: 1400px) {
+    #table-field {
+        max-width: 450px;
+        max-height: 450px;
+    }
+    .channel{
+        font-size: 70px;
+    }
+    /* >>Player One */
+    #playerOne {
+        border: 7px solid var(--red);
+        width: 220px;
+        height: 268px;
+        padding-top: 2rem;
+    }
+    #logoplayer1 {
+        width: 100px;
+        height: 100px;
+        margin-bottom: -35px;
+    }
+    #textlogo {
+        font-size: 75px;
+    }
+    #player1 {
+        font-size: 20px;
+        margin-bottom: -10px;
+    }
+    #playerName1 {
+        margin: 0;
+        font-size: 40px;
+    }
+    #score1 {
+        margin: 0;
+        font-size: 20px;
+    }
+    #numScore1 {
+        margin-top: -15px;
+        font-size: 60px;
+    }
+    /* >>Player One */
+    
+    /* >>Field */
+    #timeIcon {
+        font-size: 45px!important;
+    }
+    #countTime {
+        font-size: 40px;
+    }
+    #countTurn {
+        font-size: 25px;
+        margin: 0;
+    }
+    #logoplayerNav {
+        width: 60px;
+        height: 60px;
+    }
+    #table-field {
+        max-width: 350px;
+        max-height: 350px;
+    }
+    #textlogo-turn {
+        font-size: 50px;
+    }
+
+    /* >>Field */
+
+    /* >>Player Two */
+    #playerTwo {
+        border: 7px solid var(--blue);
+        width: 220px;
+        height: 268px;
+        padding-top: 2rem;
+    }
+    #logoplayer2 {
+        width: 100px;
+        height: 100px;
+        margin-bottom: -35px;
+    }
+    #textlogo {
+        font-size: 75px;
+    }
+    #player2 {
+        font-size: 20px;
+        margin-bottom: -10px;
+    }
+    #playerName2 {
+        margin: 0;
+        font-size: 40px;
+    }
+    #score2 {
+        margin: 0;
+        font-size: 20px;
+    }
+    #numScore2 {
+        margin-top: -15px;
+        font-size: 60px;
+    }
+    /* >>Player Two */
+}
 @media screen and (max-width: 992px) {
+
+    /* -------Navbar Zone------- */
+    #navImg {
+        display: none;
+    }
+    #btnSetting {
+        height: 4rem;
+        font-size: 2rem;
+    }
+    #btnLogIn {
+        height: 4rem;
+        font-size: 2rem;
+    }
+    #btnAccount {
+        height: 4rem;
+        font-size: 2rem;
+    }
+    #btnLogOut {
+        font-size: 1rem;
+    }
+    #btnProfile {
+        font-size: 1rem;
+    }
+    #btnLogin {
+        font-size: 1.25rem;
+    }
+    #btnSignup {
+        font-size: 1.25rem;
+    }
+    .ToggleSignup {
+        font-size: 1.25rem;
+    }
+    #text-modal-head {
+        font-size: 2rem; 
+        font-weight: bold;
+    }
+    #text-modal-body {
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+    #modal-login {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    #modal-signup {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    #modal-profile {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    #DisplayName {
+        font-size: 1.25rem;
+    }
+    #UserScore {
+        font-size: 1.25rem;
+    }
+    /* -------Navbar Zone------- */
+
+    /* -------Index Page------- */
     #MainLogo {
         width: 300px;
         height: 120px;
@@ -23,30 +183,353 @@
         font-size: 1rem;
         margin-top: 1.5rem;
     }
-    #btnSetting {
-        height: 4rem;
-        font-size: 2rem;
-    }
-    #btnLogIn {
-        height: 4rem;
-        font-size: 2rem;
-    }
-    #btnAccount {
-        height: 4rem;
-        font-size: 2rem;
-    }
     #container-index {
-        margin-top: 2rem;
+        margin-top: 4rem;
     }
-    #btnLogOut {
+    #HowtoplayPage1 {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    #HowtoplayPage2 {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    #text-htp-head {
+        font-weight: bold;
+        font-size: 3rem;
+    }
+    #htp-description {
+        font-size: 1.25rem;
+    }
+    #btnNext {
         font-size: 1rem;
     }
-    #btnProfile {
+    #btnPrevious {
         font-size: 1rem;
+    }
+    #howtoplay-content{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    /* -------Index Page------- */
+
+    /* -------Leaderboard Page------- */
+    #btnBack {
+        font-size: 1.5rem;
+        width: 7rem;
+    }
+    #text-goBack {
+        font-size: 1.5rem; 
+        padding-left: 1rem;
+    }
+    #leaderTable {
+        font-size: 1.5rem;
+    }
+    /* -------Leaderboard Page------- */
+
+    /* -------Mode Selection Page------- */
+    #text-mode-green {
+        font-size: 3rem;
+    }
+    #text-mode-red {
+        font-size: 1.5rem;
+    }
+    #icon-mode {
+        font-size: 3.5rem;
+    }
+    #btnQuick {
+        padding-top: 2rem;
+        padding-bottom: 1.5rem;
+    }
+    #btnFriend {
+        padding-top: 2rem;
+        padding-bottom: 1.5rem;
+    }
+    #mode-container {
+        padding-top: 7rem;
+    }
+    #MiddleTableMode {
+        width: 10%;
+    }
+    /* -------Mode Selection Page------- */
+
+    /* -------Friend Mode Code------- */
+    #text-roomcode {
+        font-size: 1.75rem;
+    }
+    #input-friend-join {
+        font-size: 1.75rem;
+    }
+    #text-join {
+        font-size: 1.75rem;
+    }
+    #join-icon {
+        font-size: 1.75rem;
+    }
+    #btnJoin {
+        width: 10rem;
+    }
+    #text-OR {
+        font-size: 1.75rem;
+    }
+    #text-Create {
+        margin-left: 1rem;
+    }
+    #text-Room {
+        margin-left: 1rem;
+    }
+    #btnCreateRoom {
+        font-size: 1.75rem;
+    }
+    /* -------Friend Mode Code------- */
+
+    /* -------Field Page------- */
+    #main-container-field {
+        margin: 0!important;
+    }
+    #main-row-field {
+        margin: 0!important;
+    }
+
+    /* >>Player One */
+    #playerOne {
+        border: 5px solid var(--red);
+        width: 150px;
+        height: 200px;
+        padding-top: 2rem;
+    }
+    #logoplayer1 {
+        width: 70px;
+        height: 70px;
+        margin-bottom: -20px;
+    }
+    #textlogo {
+        font-size: 40px;
+    }
+    #player1 {
+        font-size: 15px;
+        margin: 0;
+    }
+    #playerName1 {
+        margin: 0;
+        font-size: 30px;
+    }
+    #score1 {
+        margin: 0;
+        font-size: 15px;
+    }
+    #numScore1 {
+        margin-top: -15px;
+        font-size: 50px;
+    }
+    /* >>Player One */
+
+    /* >>Field */
+    #timeblock {
+        justify-content: end!important;
+        margin-right: 4rem;
+    }
+    #turnblock {
+        align-items: start!important;
+        margin-left: 5rem;
+    }
+    #timeIcon {
+        font-size: 45px!important;
+    }
+    #countTime {
+        font-size: 40px;
+    }
+    #countTurn {
+        font-size: 25px;
+        margin: 0;
+    }
+    #logoplayerNav {
+        width: 60px;
+        height: 60px;
+    }
+    #table-field {
+        max-width: 350px;
+        max-height: 350px;
+    }
+    #textlogo-turn {
+        font-size: 50px;
+    }
+    .channel{
+        font-size: 50px;
+    }
+
+    /* >>Field */
+
+    /* >>Player Two */
+    #playerTwo {
+        border: 5px solid var(--blue);
+        width: 150px;
+        height: 200px;
+        padding-top: 2rem;
+    }
+    #logoplayer2 {
+        width: 70px;
+        height: 70px;
+        margin-bottom: -20px;
+    }
+    #textlogo {
+        font-size: 40px;
+    }
+    #player2 {
+        font-size: 15px;
+        margin: 0;
+    }
+    #playerName2 {
+        margin: 0;
+        font-size: 30px;
+    }
+    #score2 {
+        margin: 0;
+        font-size: 15px;
+    }
+    #numScore2 {
+        margin-top: -15px;
+        font-size: 50px;
+    }
+    /* >>Player Two */
+    /* -------Field Page------- */
+}
+
+@media screen and (max-width: 700px) {
+    #table-field {
+        max-width: 300px;
+        max-height: 300px;
+    }
+    .channel{
+        font-size: 40px;
+    }
+    #timeIcon {
+        font-size: 30px!important;
+    }
+    #countTime {
+        font-size: 30px;
+    }
+    #countTurn {
+        font-size: 25px;
+        margin: 0;
+    }
+    #navfield {
+        margin: 0;
+        margin-bottom: 15px;
+    }
+    #logoplayerNav {
+        width: 50px;
+        height: 50px;
+    }
+}
+@media screen and (max-width: 620px) {
+    #table-field {
+        max-width: 265px;
+        max-height: 265px;
+    }
+    .channel{
+        font-size: 40px;
+    }
+    #logoplayer1 {
+        width: 60px;
+        height: 60px;
+        margin-bottom: -15px;
+    }
+    #textlogo {
+        font-size: 35px;
+    }
+    #playerOne {
+        border: 4px solid var(--red);
+        width: 120px;
+        height: 180px;
+        padding-top: 1rem;
+    }
+    #player1 {
+        font-size: 10px;
+        margin: 0;
+    }
+    #playerName1 {
+        margin: 0;
+        font-size: 22px;
+    }
+    #score1 {
+        margin: 0;
+        font-size: 10px;
+    }
+    #numScore1 {
+        margin-top: -15px;
+        font-size: 40px;
+    }
+    #logoplayer2 {
+        width: 60px;
+        height: 60px;
+        margin-bottom: -15px;
+    }
+    #playerTwo {
+        border: 4px solid var(--blue);
+        width: 120px;
+        height: 180px;
+        padding-top: 1rem;
+    }
+    #player2 {
+        font-size: 10px;
+        margin: 0;
+    }
+    #playerName2 {
+        margin: 0;
+        font-size: 22px;
+    }
+    #score2 {
+        margin: 0;
+        font-size: 10px;
+    }
+    #numScore2 {
+        margin-top: -15px;
+        font-size: 40px;
     }
 }
 
 @media screen and (max-width: 576px) {
+
+    /* -------Navbar Zone------- */
+    #btnSetting {
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+    #btnLogIn {
+        height: 2.5rem;
+        font-size: 1rem;
+        padding: 0% 0.5rem;
+    }
+    #btnAccount {
+        height: 2.5rem;
+        font-size: 1rem;
+        padding: 0% 0.5rem;
+    }
+    #btnLogOut {
+        font-size: 0.75rem;
+    }
+    #btnProfile {
+        font-size: 0.75rem;
+    }
+    #text-modal-head {
+        font-size: 1.5rem; 
+    }
+    #text-modal-body {
+        font-size: 1rem;
+    }
+    .ToggleSignup {
+        font-size: 1rem;
+    }
+    #btnLogin {
+        font-size: 1rem;
+    }
+    #btnSignup {
+        font-size: 1rem;
+    }
+    /* -------Navbar Zone------- */
+    
+    /* -------Index Page------- */
     #MainLogo {
         width: 200px;
         height: 70px;
@@ -68,30 +551,332 @@
         margin-top: 0.75rem;
     }
     #btnHow {
-        font-size: 0.5rem;
+        font-size: 0.75rem;
         margin-top: 0.75rem;
     }
-    #btnSetting {
-        height: 2rem;
-        font-size: 1rem;
-    }
-    #btnLogIn {
-        height: 2rem;
-        font-size: 1rem;
-        padding: 0% 1rem;
-    }
-    #btnAccount {
-        height: 2rem;
-        font-size: 1rem;
-        padding: 0% 1rem;
-    }
     #container-index {
-        margin-top: 1rem;
+        margin-top: 6rem;
     }
-    #btnLogOut {
-        font-size: 0.5rem;
+    #text-htp-head {
+        font-weight: bold;
+        font-size: 2rem;
     }
-    #btnProfile {
-        font-size: 0.5rem;
+    #htp-description {
+        font-size: 1rem;
     }
+    #btnNext {
+        font-size: 0.75rem;
+    }
+    #btnPrevious {
+        font-size: 0.75rem;
+    }
+    #howtoplay-content{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    /* -------Index Page------- */
+
+    /* -------Leaderboard Page------- */
+    #btnBack {
+        font-size: 1rem;
+        width: 6rem;
+    }
+    #text-goBack {
+        font-size: 1rem; 
+        padding-left: 0.5rem;
+    }
+    #leaderTable {
+        font-size: 1rem;
+    }
+    /* -------Leaderboard Page------- */
+
+    /* -------Mode Selection Page------- */
+    #text-mode-green {
+        font-size: 2rem;
+    }
+    #text-mode-red {
+        font-size: 1rem;
+    }
+    #icon-mode {
+        font-size: 2.75rem;
+    }
+    #btnQuick {
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+    }
+    #btnFriend {
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+    }
+    #mode-container {
+        padding-top: 7rem;
+    }
+    #MiddleTableMode {
+        width: 5%;
+    }
+    /* -------Mode Selection Page------- */
+
+    /* -------Friend Mode Code------- */
+    #text-roomcode {
+        font-size: 1rem;
+    }
+    #input-friend-join {
+        font-size: 1rem;
+    }
+    #text-join {
+        font-size: 1rem;
+        margin-left: 0.5rem;
+    }
+    #join-icon {
+        font-size: 1rem;
+    }
+    #btnJoin {
+        width: 6rem;
+    }
+    #text-OR {
+        font-size: 1rem;
+    }
+    #text-Create {
+        margin-left: 0.5rem;
+    }
+    #text-Room {
+        margin-left: 0.5rem;
+    }
+    #btnCreateRoom {
+        font-size: 1rem;
+    }
+    /* -------Friend Mode Code------- */
+
+    /* -------Field Page------- */
+    #main-container-field {
+        margin: 0!important;
+    }
+    #main-row-field {
+        margin: 0!important;
+    }
+
+    /* >>Player One */
+    #playerOne {
+        border: 3px solid var(--red);
+        width: 100px;
+        height: 150px;
+        padding-top: 1rem;
+    }
+    #logoplayer1 {
+        width: 50px;
+        height: 50px;
+        margin-bottom: -25px;
+    }
+    #textlogo {
+        font-size: 30px;
+    }
+    #player1 {
+        font-size: 10px;
+        margin: 0;
+    }
+    #playerName1 {
+        margin: 0;
+        font-size: 20px;
+    }
+    #score1 {
+        margin: 0;
+        font-size: 10px;
+    }
+    #numScore1 {
+        margin-top: -15px;
+        font-size: 40px;
+    }
+    /* >>Player One */
+
+    /* >>Field */
+    #timeblock {
+        justify-content: end!important;
+        margin-right: 2rem;
+    }
+    #turnblock {
+        align-items: start!important;
+        margin-left: 3rem;
+    }
+    #timeIcon {
+        font-size: 20px!important;
+    }
+    #countTime {
+        font-size: 20px;
+    }
+    #countTurn {
+        font-size: 15px;
+        margin: 0;
+    }
+    #logoplayerNav {
+        width: 30px;
+        height: 30px;
+    }
+    #navfield {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    #table-field {
+        max-width: 225px;
+        max-height: 225px;
+    }
+    #td-field {
+        padding: 4px;
+    }
+    #textlogo-turn {
+        font-size: 20px;
+    }
+    .channel{
+        font-size: 35px;
+    }
+
+    /* >>Field */
+
+    /* >>Player Two */
+    #playerTwo {
+        border: 3px solid var(--blue);
+        width: 100px;
+        height: 150px;
+        padding-top: 1rem;
+    }
+    #logoplayer2 {
+        width: 50px;
+        height: 50px;
+        margin-bottom: -25px;
+    }
+    /* #textlogo {
+        font-size: 40px;
+    } */
+    #player2 {
+        font-size: 10px;
+        margin: 0;
+    }
+    #playerName2 {
+        margin: 0;
+        font-size: 20px;
+    }
+    #score2 {
+        margin: 0;
+        font-size: 10px;
+    }
+    #numScore2 {
+        margin-top: -15px;
+        font-size: 40px;
+    }
+    /* >>Player Two */
+    /* -------Field Page------- */
+}
+
+@media screen and (max-width: 450px) {
+    #main-row-field {
+        flex-direction: column!important;
+    }
+    #table-field {
+        max-width: 250px;
+        max-height: 250px;
+    }
+    #td-field {
+        padding: 3px;
+    }
+    .channel{
+        font-size: 25px;
+    }
+    #navfield {
+        margin: 0.15rem 2.5rem 0.15rem 0;
+    }
+    #timeblock {
+        margin: 0;
+        flex-direction: row!important;
+    }
+    #turnblock {
+        margin: 0;
+        flex-direction: row!important;
+    }
+    #countTurn {
+        margin: 0.25rem 0.5rem 0 0;
+    }
+
+    /* >>Player One */
+    #main-container-field {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #main-container-player1 {
+        width: 100%;
+    }
+    #layerTop {
+        margin-right: 2.75rem;
+    }
+    #layerBottom {
+        margin: 0;
+        margin-left: 2.75rem;
+    }
+    #playerOne {
+        flex-direction: row!important;
+        border: 3px solid var(--red);
+        width: 180px;
+        height: 40px;
+        padding: 1rem;
+    }
+    #logoplayer1 {
+        width: 50px;
+        height: 50px;
+        margin-bottom: -45px;
+    }
+    #textlogo {
+        font-size: 30px;
+    }
+    #player1 {
+        font-size: 5px;
+    }
+    #playerName1 {
+        margin: 0;
+        font-size: 10px;
+    }
+    #score1 {
+        font-size: 5px;
+        margin-top: 0.5rem;
+    }
+    #numScore1 {
+        margin-top: -0.5rem;
+        font-size: 20px;
+    }
+    /* >>Player One */
+
+    /* >>Player Two */
+    #main-container-player2 {
+        width: 100%;
+    }
+    #playerTwo {
+        flex-direction: row!important;
+        border: 3px solid var(--blue);
+        width: 180px;
+        height: 40px;
+        padding: 1rem;
+    }
+    #logoplayer2 {
+        width: 50px;
+        height: 50px;
+        margin-bottom: -45px;
+    }
+    /* #textlogo {
+        font-size: 30px;
+    } */
+    #player2 {
+        font-size: 5px;
+    }
+    #playerName2 {
+        margin: 0;
+        font-size: 10px;
+    }
+    #score2 {
+        font-size: 5px;
+        margin-top: 0.5rem;
+    }
+    #numScore2 {
+        margin-top: -0.5rem;
+        font-size: 20px;
+    }
+    /* >>Player Two */
 }

@@ -23,7 +23,7 @@
   <div class="navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="image/LogoWithText.png" width="450px" height="75px">
+        <img id="navImg" src="image/LogoWithText.png" width="450px" height="75px">
       </a>
       <nav class="navbar navbar-expand-lg">
         <button type="button" id="btnSetting" class="btn btn-lg" data-bs-toggle="modal" data-bs-target="#modal-setting">
@@ -33,10 +33,10 @@
           Login <i class="bi bi-person"></i>
         </button>
         <div class="btn-group">
-          <button type="button" id="btnAccount" class="btn btn-sm dropdown-toggle logged-in" data-bs-toggle="dropdown" aria-expanded="false"> 
+          <button type="button" id="btnAccount" class="btn btn-sm logged-in" data-bs-toggle="dropdown" aria-expanded="false"> 
             Account Name <i class="bi bi-person"></i>
           </button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu dropdown-menu-end">
             <li><button type="button" class="btn dropdown-item" id="btnProfile" data-bs-toggle="modal" data-bs-target="#modal-profile">Profile <i class="bi bi-person-circle"></i></button></li>
             <li><hr class="dropdown-divider"></li>
             <li><button type="button" class="btn dropdown-item" id="btnLogOut">Log Out <i class="bi bi-box-arrow-in-right"></i></button></li>
@@ -139,7 +139,7 @@
             <span id="UserScore">473450</span>
             <p id="feedback-msg-signup"></p>
             <br>
-            <button type="submit" class="btn" id="btnChange">Save Change.</button>
+            <button type="submit" class="btn" id="btnChange">Close.</button>
           </div>
         </form>
       </div>
@@ -190,7 +190,7 @@
             <tbody>
                 <tr>
                     <td>
-                        <button type="button" class="btn py-3" id="btnCreateRoom">
+                        <button type="button" class="btn py-1" id="btnCreateRoom">
                             <i class="bi bi-plus-circle" id="icon-plus"></i>
                             <span id="text-Create">Create</span>
                             <span id="text-Room">room</span>
