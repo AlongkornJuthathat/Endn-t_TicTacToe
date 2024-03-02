@@ -1,4 +1,4 @@
-const usersInfo = firebase.database().ref("Users");
+/* const usersInfo = firebase.database().ref("Users");
 
 let addusers = () => {
     var Display_name = document.getElementById("input-name-signup").value;
@@ -11,4 +11,4 @@ let addusers = () => {
     console.log("Add user complete!");
     
     getUserInfo();
-}
+} */

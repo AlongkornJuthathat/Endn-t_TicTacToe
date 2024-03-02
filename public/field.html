@@ -151,7 +151,7 @@
     </div>
   </div>
 
-  <!-- Table Field -->
+  <!-- Exit btn -->
   <nav>
     <div class="container-fluid mt-3">
       <a href="index.html" type="button" class="btn" id="btnBack">
@@ -160,36 +160,69 @@
       </a>
     </div>
   </nav>
+  <!-- Exit btn -->
+
+  <!-- Main Container -->
   <div class="container-lg text-center" id="main-container-field" style="margin-top: -4.5rem;">
-    <div class="row-lg mt-5 d-flex flex-row justify-content-center" id="main-row-field" style="--bs-gutter-x: 0rem;">
+    
+    <!-- Top field to display who win sudden zone!!! -->
+    <div class="d-flex flex-column justify-content-center align-item-center" id="main-top-field">
+      <p class="win-sudden-head" id="win-sudden-head">Sudden Zone</p>
+      <div class="d-flex flex-row justify-content-center align-item-center">
+        <p class="px-1 win-sudden-playername" id="win-sudden-playername">TiTle</p>
+        <p class="px-1 win-text" id="win-text">WIN!!</p>
+      </div>
+      
+    </div>
+    <!-- Top field to display who win sudden zone!!! -->
+
+    <!--content main-container -->
+    <div class="row-lg d-flex flex-row justify-content-center" id="main-row-field" style="--bs-gutter-x: 0rem;">\
+
+        <!-- Player One  -->
         <div class="col-3 d-flex flex-column justify-content-center align-items-center" id="main-container-player1">
-            <div class="logoplayer1 d-flex align-items-center justify-content-center" id="logoplayer1">
-              <p class="textlogo" id="textlogo">O</p>
+          <div class="logoplayer1 d-flex align-items-center justify-content-center" id="logoplayer1">
+            <p class="textlogo" id="textlogo">O</p>
+          </div>
+          <div class="container-xl d-flex flex-column justify-content-center align-items-center" id="playerOne">
+            <div class="layerTop" id="layerTop">
+              <p class="player1" id="player1">Player 1</p>
+              <p class="playerName1" id="playerName1">TiTle</p>
             </div>
-            <div class="container-xl d-flex flex-column justify-content-center align-items-center" id="playerOne">
-              <div class="layerTop" id="layerTop">
-                <p class="player1" id="player1">Player 1</p>
-                <p class="playerName1" id="playerName1">TiTle</p>
-              </div>
-              <div class="layerBottom" id="layerBottom">
-                <p class="score1" id="score1">score</p>
-                <p class="numScore1" id="numScore1">0</p>
-              </div>
+            <div class="layerBottom" id="layerBottom">
+              <p class="score1" id="score1">score</p>
+              <p class="numScore1" id="numScore1">0</p>
             </div>
+          </div>
         </div>
+        <!-- Player One  -->
+
+        <!-- Field-container  -->
         <div class="col-xl-6 d-flex flex-column justify-content-center align-items-center" id="main-field">
+
+            <!-- Nav-game  -->
             <div class="col-12 d-flex justify-content-center" id="navfield">
+
+              <!-- time-countdown  -->
               <div class="col-6 d-flex flex-row justify-content-center align-items-end" id="timeblock">
                 <i class="bi bi-clock" id="timeIcon" style="font-size: 75px; color: var(--yellow);"></i>
                 <p class="countTime" id="countTime">10</p>
               </div>
+              <!-- time-countdown  -->
+
+              <!-- turn-player  -->
               <div class="col-6 d-flex flex-column justify-content-center align-items-center" id="turnblock">
                 <p class="countTurn" id="countTurn">Turn</p>
                 <div class="logoplayerNav d-flex align-items-center justify-content-center" id="logoplayerNav">
                   <p class="textlogo-turn" id="textlogo-turn">O</p>
                 </div>
               </div>
+              <!-- turn-player  -->
+
             </div>
+            <!-- Nav-game  -->
+
+            <!-- Table-field -->
             <table id="table-field">
                 <tr>
                     <td id="td-field">
@@ -225,7 +258,12 @@
                     </td>
                 </tr>
             </table>
+            <!-- Table-field -->
+
         </div>
+        <!-- Field-container  -->
+
+        <!-- Player Two  -->
         <div class="col-3 d-flex flex-column justify-content-center align-items-center" id="main-container-player2">
           <div class="logoplayer2 d-flex align-items-center justify-content-center" id="logoplayer2">
             <p class="textlogo" id="textlogo">X</p>
@@ -240,9 +278,64 @@
               <p class="numScore2" id="numScore2">0</p>
             </div>
           </div>
+        </div>
+        <!-- Player Two  -->
+
+    </div>
+    <!-- Field main-container -->
+    
+  </div>
+
+  <button type="button" id="btnHow" class="btn w-1" data-bs-target="#SuddenModal" data-bs-toggle="modal">
+    <span>Test Modal sudden zone</span>
+  </button>
+
+  <!-- Modal Sudden Zone -->
+  <div class="modal fade" id="SuddenModal" data-bs-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered">
+      <div class="modal-content" id="sudden-content">
+        <div class="modal-header border-0" id="sudden-header">
+          <i class="bi bi-exclamation-triangle-fill px-4" style="font-size: 40px; color: var(--red);"></i>
+          <h5 class="modal-title mx-0 my-0" id="sudden-header-text">Sudden Zone</h5>
+          <h5 class="modal-title mx-0 my-0" id="sudden-head-text">Choose your Choice.</h5>
+        </div>
+        <form id="sudden-form">
+          <div class="modal-body border-0 d-flex flex-row">
+            <div class="suddenp1" id="suddenp1">
+              <div class="suddenp1-logo" id="suddenp1-logo">O</div>
+              <p class="suddenp1-player1 mx-0 my-0" id="suddenp1-player1">Player 1</p>
+              <p class="suddenp1-playername1 mx-0 my-0" id="suddenp1-playername1">TiTle</p>
+              <div class="playeronechoose">
+                <img src="image/gun-pointer.png" alt="">
+              </div>
+            </div>
+            <div class="suddentimecount" id="suddentimecount">
+              <p class="suddentime-header mx-0 my-0" id="suddentime-header">Time</p>
+              <p class="suddentime-count mx-0 my-0" id="suddentime-count">10</p>
+            </div>
+            <div class="suddenp2" id="suddenp2">
+              <div class="suddenp2-logo" id="suddenp2-logo">X</div>
+              <p class="suddenp2-player2 mx-0 my-0" id="suddenp2-player2">Player 2</p>
+              <p class="suddenp2-playername2 mx-0 my-0" id="suddenp2-playername2">TeeNoDie</p>
+              <div class="playeronechoose">
+                <img src="image/gun-pointer.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer" id="sudden-btn">
+            <button type="button" class="btn btn-rock mb-2 px-2 py-2" data-bs-toggle="modal" data-bs-dismiss="modal" id="btnRock">
+              <img src="image/gun-pointer.png" alt="">
+            </button>
+            <button type="button" class="btn btn-paper mb-2 px-2 py-2" data-bs-toggle="modal" data-bs-dismiss="modal" id="btnRock">
+              <img src="image/gun-pointer.png" alt="">
+            </button>
+            <button type="button" class="btn btn-scissors mb-2 px-2 py-2" data-bs-toggle="modal" data-bs-dismiss="modal" id="btnRock">
+              <img src="image/gun-pointer.png" alt="">
+            </button>
+          </div>
+        </form>
       </div>
     </div>
-    
   </div>
 
   <script>
@@ -260,8 +353,8 @@
   firebase.initializeApp(firebaseConfig)
   </script>
   <script src="normal_script.js"></script>
-  <script src="insert_data.js"></script>
   <script src="read_data.js"></script>
   <script src="auth.js"></script>
+  <script src="game.js"></script>
 </body>
 </html>

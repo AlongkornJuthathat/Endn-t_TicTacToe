@@ -61,7 +61,16 @@
     #textlogo-turn {
         font-size: 50px;
     }
-
+    #win-sudden-head {
+        font-size: 20px;
+        margin: 0;
+    }
+    #win-sudden-playername {
+        font-size: 35px;
+    }
+    #win-text {
+        font-size: 35px;
+    }
     /* >>Field */
 
     /* >>Player Two */
@@ -357,6 +366,16 @@
     .channel{
         font-size: 50px;
     }
+    #win-sudden-head {
+        font-size: 20px;
+        margin: 0;
+    }
+    #win-sudden-playername {
+        font-size: 30px;
+    }
+    #win-text {
+        font-size: 30px;
+    }
 
     /* >>Field */
 
@@ -403,6 +422,16 @@
     .channel{
         font-size: 40px;
     }
+    #win-sudden-head {
+        font-size: 15px;
+        margin: 0;
+    }
+    #win-sudden-playername {
+        font-size: 20px;
+    }
+    #win-text {
+        font-size: 20px;
+    }
     #timeIcon {
         font-size: 30px!important;
     }
@@ -429,6 +458,16 @@
     }
     .channel{
         font-size: 40px;
+    }
+    #win-sudden-head {
+        font-size: 10px;
+        margin: 0;
+    }
+    #win-sudden-playername {
+        font-size: 15px;
+    }
+    #win-text {
+        font-size: 15px;
     }
     #logoplayer1 {
         width: 60px;
@@ -728,6 +767,16 @@
     .channel{
         font-size: 35px;
     }
+    #win-sudden-head {
+        font-size: 10px;
+        margin: 0;
+    }
+    #win-sudden-playername {
+        font-size: 15px;
+    }
+    #win-text {
+        font-size: 15px;
+    }
 
     /* >>Field */
 
@@ -767,6 +816,9 @@
 }
 
 @media screen and (max-width: 450px) {
+    #main-container-field {
+        flex-direction: column!important;
+    }
     #main-row-field {
         flex-direction: column!important;
     }
@@ -793,6 +845,16 @@
     }
     #countTurn {
         margin: 0.25rem 0.5rem 0 0;
+    }
+    #win-sudden-head {
+        font-size: 10px;
+        margin: 0;
+    }
+    #win-sudden-playername {
+        font-size: 15px;
+    }
+    #win-text {
+        font-size: 15px;
     }
 
     /* >>Player One */
