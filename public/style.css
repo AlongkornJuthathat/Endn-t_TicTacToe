@@ -693,11 +693,16 @@ th {
     align-content: center;
     justify-content: center;
 }
-.btn{
-    border-radius: 12Spx;
+.btn-sudden{
+    border-radius: 10px;
     background-color: #D9D9D9;
     box-shadow: 0px 8px 0px #9f9f9f;
+    transition: 0.25s;
 }
-.btn:hover{
+.btn-sudden:hover{
     background-color: #9f9f9f;
+}
+#img-rock, #img-paper, #img-scissors {
+    width: 90px;
+    height: auto;
 }

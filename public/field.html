@@ -291,7 +291,7 @@
   </button>
 
   <!-- Modal Sudden Zone -->
-  <div class="modal fade" id="SuddenModal" data-bs-backdrop="static" tabindex="-1">
+  <div class="modal fade" id="SuddenModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered">
       <div class="modal-content" id="sudden-content">
         <div class="modal-header border-0" id="sudden-header">
@@ -305,8 +305,8 @@
               <div class="suddenp1-logo" id="suddenp1-logo">O</div>
               <p class="suddenp1-player1 mx-0 my-0" id="suddenp1-player1">Player 1</p>
               <p class="suddenp1-playername1 mx-0 my-0" id="suddenp1-playername1">TiTle</p>
-              <div class="playeronechoose">
-                <img src="image/gun-pointer.png" alt="">
+              <div class="playerOnechoose" id="playerOnechoose">
+                <img src="image/rock.png" id="img-rock">
               </div>
             </div>
             <div class="suddentimecount" id="suddentimecount">
@@ -317,20 +317,20 @@
               <div class="suddenp2-logo" id="suddenp2-logo">X</div>
               <p class="suddenp2-player2 mx-0 my-0" id="suddenp2-player2">Player 2</p>
               <p class="suddenp2-playername2 mx-0 my-0" id="suddenp2-playername2">TeeNoDie</p>
-              <div class="playeronechoose">
-                <img src="image/gun-pointer.png" alt="">
+              <div class="playerTwochoose" id="playerTwochoose">
+                <i class="bi bi-question-circle-fill" style="font-size: 70px; color: #638889"></i>
               </div>
             </div>
           </div>
           <div class="modal-footer" id="sudden-btn">
-            <button type="button" class="btn btn-rock mb-2 px-2 py-2" data-bs-toggle="modal" data-bs-dismiss="modal" id="btnRock">
-              <img src="image/gun-pointer.png" alt="">
+            <button type="button" class="btn-sudden btn-rock mb-2 px-2 py-2" data-bs-toggle="modal" id="btnRock">
+              <img src="image/rock.png" id="img-rock">
             </button>
-            <button type="button" class="btn btn-paper mb-2 px-2 py-2" data-bs-toggle="modal" data-bs-dismiss="modal" id="btnRock">
-              <img src="image/gun-pointer.png" alt="">
+            <button type="button" class="btn-sudden btn-paper mb-2 px-2 py-2" data-bs-toggle="modal" id="btnPaper">
+              <img src="image/paper.png" id="img-paper">
             </button>
-            <button type="button" class="btn btn-scissors mb-2 px-2 py-2" data-bs-toggle="modal" data-bs-dismiss="modal" id="btnRock">
-              <img src="image/gun-pointer.png" alt="">
+            <button type="button" class="btn-sudden btn-scissors mb-2 px-2 py-2" data-bs-toggle="modal" id="btnScissors">
+              <img src="image/scissors.png" id="img-scissors">
             </button>
           </div>
         </form>
