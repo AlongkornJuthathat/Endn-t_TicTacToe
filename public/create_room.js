@@ -1,86 +1,93 @@
+//const currentUser = firebase.auth().currentUser;
 const gameRef = firebase.database().ref('Game');
 const Userlist = firebase.database().ref('users');
+//const UnameRef = firebase.database().ref('users/' + currentUser.uid + '/username');
 
 const btnQuickmatch = document.querySelector('#btnQuick');
 btnQuickmatch.addEventListener("click", joinRoom);
 
 var Ustate = 'none'
 
-/* function FindRoom(){
-  const currentUser = firebase.auth().currentUser;
-  console.log(currentUser)
-    if (currentUser) {
-        Userlist.child(currentUser.uid).push({
-            status: 'findroom',
-        })
-        Ustate = 'findroom'
-    }
-    joinRoom();
-}
- */
 
 function createGameRoom() {
-  console.log(Ustate);
-  var roomId = gameRef.push().key;
-  window.location.href = "lobby_quickmatch.html?roomId=" + roomId;
   const currentUser = firebase.auth().currentUser;
-  var gameState = {
-    userO: currentUser.uid,
-    userX: '',
-    status: 'lobby',
-    roomId: roomId
-  };
-  Ustate = 'lobby'
-  // Store game state in the database
-  gameRef.child(roomId).set(gameState);
-  console.log(Ustate);
-  // Return the room ID
-  return roomId;
+  var roomId = gameRef.push().key;
+  var UnameRef = firebase.database().ref('users/' + currentUser.uid + '/username');
+  // Fetch the username asynchronously
+  UnameRef.once('value').then(function (snapshot) {
+    var Uname = snapshot.val();
+
+    // Construct the game state object
+    var gameState = {
+      userO: currentUser.uid,
+      userOname: Uname,
+      userX: '',
+      userXname: '',
+      status: 'lobby',
+      roomId: roomId
+    };
+
+    // Set the game state in the database
+    return gameRef.child(roomId).set(gameState);
+  }).then(() => {
+    // Redirect to the game field page after the room is created
+    window.location.href = "field.html?roomId=" + roomId;
+  }).catch((error) => {
+    console.error("Error creating game room:", error);
+  });
+
+  // Note: No code here will wait for the asynchronous operations above to complete
 }
 
 function joinRoom() {
-  console.log('findroom');
+  console.log('Finding room...');
   const currentUser = firebase.auth().currentUser;
+  var UnameRef = firebase.database().ref('users/' + currentUser.uid + '/username');
+  // Fetch the username asynchronously
+  UnameRef.once('value').then(function (snapshot) {
+    var Uname = snapshot.val();
 
-  gameRef.once('value').then((snapshot) => {
-    if (snapshot.exists()) {
-      console.log('have room');
-      const gameData = snapshot.val();
-      let foundValidRoom = false;
-      // Iterate over each room
-      Object.keys(gameData).forEach((key) => {
-        const room = gameData[key];
-        // Check if the room is valid for joining
-        if (room.status === 'lobby' && room.userO === '') {
-          // Update game state to mark the room as occupied by the current user
-          gameRef.child(key).update({
-            userO: currentUser.uid,
-            status: 'occupied'
-          }).then(() => {
-            // Redirect to the game field page after updating the database
-            window.location.href = "lobby_quickmatch.html?roomId=" + key;
-          }).catch((error) => {
-            console.error("Error updating room:", error);
-          });
+    // Proceed with joining room logic after fetching username
+    gameRef.once('value').then((snapshot) => {
+      if (snapshot.exists()) {
+        console.log('Rooms exist');
+        const gameData = snapshot.val();
+        let foundValidRoom = false;
+        Object.keys(gameData).forEach((key) => {
+          const room = gameData[key];
+          if (room.status === 'lobby' && room.userX === '') {
+            // Update room with user's name and UID
+            gameRef.child(key).update({
+              userXname: Uname,
+              userX: currentUser.uid,
+              status: 'occupied'
+            }).then(() => {
+              // Redirect to game field page after updating room
+              window.location.href = "field.html?roomId=" + key;
+            }).catch((error) => {
+              console.error("Error updating room:", error);
+            });
+            foundValidRoom = true; // Move this line outside of the return statement
+          }
+        });
 
-          foundValidRoom = true; // Set flag to indicate a valid room was found
+        if (!foundValidRoom) {
+          console.log("No valid room found, creating a new one");
+          createGameRoom();
         }
-      });
-
-      // If no valid room was found, create a new room
-      if (!foundValidRoom) {
-        console.log("No valid room found, creating a new one");
+      } else {
+        console.log("No rooms exist, creating a new one");
         createGameRoom();
       }
-    } else {
-      // No rooms exist, create a new one
-      console.log("No rooms exist, creating a new one");
-      createGameRoom();
-    }
+    }).catch((error) => {
+      console.error("Error finding room:", error);
+    });
   }).catch((error) => {
-    console.error("Error finding room:", error);
+    console.error("Error fetching username:", error);
   });
 }
+
+
 
 firebase.auth().onAuthStateChanged((user) => {
   const currentUser = firebase.auth().currentUser;

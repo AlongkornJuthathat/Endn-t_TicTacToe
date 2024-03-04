@@ -11,6 +11,20 @@ loginForm.addEventListener("submit", loginUser);
 const loginFeedback = document.querySelector("#feedback-msg-login");
 const loginModal = new bootstrap.Modal(document.querySelector("#modal-login"));
 
+const logoutItems = document.querySelectorAll(".logged-out");
+const loginItems = document.querySelectorAll(".logged-in");
+
+let setupUI = (user) => {
+    const currentUser = firebase.auth().currentUser;
+    if (user) {
+        loginItems.forEach((item) => (item.style.display = "inline-block"));
+        logoutItems.forEach((item) => (item.style.display = "none"));
+    } else {
+        loginItems.forEach((item) => (item.style.display = "none"));
+        logoutItems.forEach((item) => (item.style.display = "inline-block"));
+        document.querySelector("#btnLogIn").innerHTML = "Login <i class='bi bi-person'></i>";
+    }
+}
 
 function createUser(event) {
     event.preventDefault();
@@ -85,6 +99,7 @@ firebase.auth().onAuthStateChanged((user) => {
             console.log(data);
             document.getElementById('btnAccount').innerHTML = data + " <i class='bi bi-person'></i>";
             document.getElementById('DisplayName').innerHTML = data;
+
         });
 
         userScoreRef.once("value", (snapshot) => {
@@ -105,9 +120,3 @@ btnLogout.addEventListener("click", function() {
     console.log("Logout Completed.");
     alert("Logout Completed!");
 })
-
-if (user !== null) {
-    const displayName = user.displayName;
-    const Email = user.email;
-    const Password = user.password;
-}
