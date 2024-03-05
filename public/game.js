@@ -8,19 +8,19 @@ function renderName() {
         if (gameData) {
             Object.keys(gameData).forEach((key) => {
                 const room = gameData[key];
-                if (key === room.roomId) {
+                if (key === room.roomId && room.status === 'occupied') {
                     document.querySelector('#playerName1').innerHTML = room.userOname;
                     document.querySelector('#playerName2').innerHTML = room.userXname;
+                } else if (key === room.roomId && room.status === 'lobby') {
+                    document.querySelector('#playerName1').innerHTML = room.userOname;
+                    document.querySelector('#playerName2').innerHTML = 'Waiting...';
                 }
             });
         }
     });
 }
 
-
-
 function startGame() {
-    
     renderName();
 }
 
