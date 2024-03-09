@@ -24,7 +24,10 @@ function createGameRoom() {
       userX: '',
       userXname: '',
       status: 'lobby',
-      roomId: roomId
+      roomId: roomId,
+      currentTurn: 'O',
+      spaces: Array(9).fill(''),
+      winner: ""
     };
 
     // Set the game state in the database
