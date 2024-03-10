@@ -61,9 +61,10 @@ function chClicked(event) {
                 console.log('Is in ' + ThisRoomId)
                 if (!spaces[id]) {
                     room.spaces[id] = room.currentTurn;
-                    event.target.innerText = room.currentTurn
+                    //event.target.innerText = room.currentTurn
                 }
                 spaces[id] = room.currentTurn;
+                console.log(spaces)
                 gameRef
                     .child(ThisRoomId)
                     .update({
@@ -72,6 +73,7 @@ function chClicked(event) {
                     })
                     .then(() => {
                         console.log('Turn updated successfully.');
+                        renderBoard(event);
                         // Check for a winner after updating the turn
                         if (playerHasWon() !== false) {
                             console.log('player has Won!');
@@ -123,6 +125,27 @@ const winningCombos = [
     ['ch01', 'ch05', 'ch09'],
     ['ch03', 'ch05', 'ch07']
 ] */
+
+function renderBoard(event){
+    const id = event.target.getAttribute('id')
+    console.log(id)
+    gameRef.on('value', (snapshot) => {
+        const gameData = snapshot.val();
+        if (gameData) {
+            Object.keys(gameData).forEach((key) => {
+                const room = gameData[key];
+                if (ThisRoomId === room.roomId && room.status === 'occupied') {
+                    /* buttons.forEach(button => {
+
+                        button.innerText = room.spaces[id] || ''; // Display symbol or empty string
+                    }); */
+                    console.log(room.spaces[id])
+                    document.getElementById(`${id}`).innerText = room.spaces[id]
+                }
+            })
+        }
+    })
+}
 
 function playerHasWon() {
     for (const condition of winningCombos) {
