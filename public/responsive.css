@@ -526,6 +526,45 @@
         margin-top: -15px;
         font-size: 40px;
     }
+
+    #win-result-col {
+        width: 400px;
+        padding: 25px 0 25px 0;
+        border: 7px solid var(--green);
+    }
+    #lose-result-col {
+        width: 400px;
+        padding: 25px 0 25px 0;
+        border: 7px solid var(--red);
+    }
+    #logo-win {
+        width: 100px;
+        height: 100px;
+    }
+    #logo-lose {
+        width: 100px;
+        height: 100px;
+    }
+    #emoji-win {
+        font-size: 70px!important;
+    }
+    #emoji-lose {
+        font-size: 70px!important;
+    }
+    #gameResult {
+        font-size: 40px;
+    }
+    #scoreplus {
+        font-size: 15px;
+    }
+    #btnBacktoHome {
+        font-size: 1rem;
+        width: 10rem;
+    }
+    #btnPlayAgain {
+        font-size: 1rem;
+        width: 10rem;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -941,4 +980,44 @@
         font-size: 20px;
     }
     /* >>Player Two */
+
+
+    #win-result-col {
+        width: 300px;
+        padding: 20px 0 20px 0;
+        border: 5px solid var(--green);
+    }
+    #lose-result-col {
+        width: 300px;
+        padding: 20px 0 20px 0;
+        border: 5px solid var(--red);
+    }
+    #logo-win {
+        width: 80px;
+        height: 80px;
+    }
+    #logo-lose {
+        width: 80px;
+        height: 80px;
+    }
+    #emoji-win {
+        font-size: 60px!important;
+    }
+    #emoji-lose {
+        font-size: 60px!important;
+    }
+    #gameResult {
+        font-size: 30px;
+    }
+    #scoreplus {
+        font-size: 10px;
+    }
+    #btnBacktoHome {
+        font-size: 0.75rem;
+        width: 8.5rem;
+    }
+    #btnPlayAgain {
+        font-size: 0.75rem;
+        width: 8.5rem;
+    }
 }

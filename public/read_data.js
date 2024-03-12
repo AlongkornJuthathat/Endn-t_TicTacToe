@@ -1,24 +1,30 @@
 let readList = () => {
-    var ref = firebase.database().ref("MyList");
-    document.getElementById("main-content").innerHTML = "";
+    var ref = firebase.database().ref("users");
+    document.getElementById("forAddName").innerHTML = "";
+    document.getElementById("forAddScore").innerHTML = "";
 
     ref.once("value").then((snapshot) => {
+        let playerData = [];
         snapshot.forEach((data) => {
             var id = data.key;
-            ref.once("value").then((snapshot) => {
-                let title = snapshot.child(id).child("title").val();
+            let name = snapshot.child(id).child("username").val();
+            let score = snapshot.child(id).child("score").val();
+            playerData.push({ name, score });
+        });
 
-                const newDiv = `
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input">
-                        <label class="form-check-label">${title}</label>
-                    </div>
-                `
-                const newElement = document.createRange().createContextualFragment(newDiv);
-                document.getElementById("main-content").appendChild(newElement);
-            })
-        })
-    })
+        playerData.sort((a, b) => b.score - a.score);
+
+        playerData.forEach(player => {
+            const newTableName = `<div>${player.name}</div>`;
+            const newTableScore = `<div>${player.score}</div>`;
+
+            const newElementName = document.createRange().createContextualFragment(newTableName);
+            document.getElementById("forAddName").appendChild(newElementName);
+
+            const newElementScore = document.createRange().createContextualFragment(newTableScore);
+            document.getElementById("forAddScore").appendChild(newElementScore);
+        });
+    });
 }
 
-window.onload = readList;
+window.onload = readList;  
